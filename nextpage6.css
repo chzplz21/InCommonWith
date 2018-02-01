@@ -1,0 +1,416 @@
+
+
+
+
+html{
+ height:100%;
+ min-height:100%;
+}
+ 
+ 
+/* 
+body {
+
+	background: url(NightSkyBigPNG.png) no-repeat center center fixed;
+	background-size: cover;
+	min-height:100%;
+
+}
+*/
+
+
+body {
+	background: #001f3f;
+	
+}
+
+
+#backgroundImage {
+   position: fixed; 
+  top: 0; 
+  left: 0; 
+	
+
+  min-width: 100%;
+  min-height: 100%;
+   visibility: hidden;
+
+}
+
+
+.startAnimation {
+  animation-name: FadeIn;
+  animation-duration: 3s;
+}
+
+@keyframes FadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+
+
+/*welcome message at the top */
+#welcome {
+	 font-family: 'Chonburi', cursive;
+	 color: white;
+	 font-size: 2vw;
+	 position: relative;
+	 z-index: 10000;
+	 
+	
+}
+
+/*logout link */
+#logout {
+	 font-family: 'Chonburi', cursive;
+	 color: white;
+	 font-size: 1.4vw;
+	 position: relative;
+	 z-index: 10000;
+	
+}
+
+#logout:hover {
+	color: #B10DC9;
+}
+
+/*div which contains the prompt */
+#prompt-container {
+	width: 400px;
+	height: 350px;
+	background-color: white;
+	margin: 0 auto;
+    font-family: 'Chonburi', cursive;
+    font-size: 30px;
+    margin-top: 30px;
+	text-align: center;
+	 position: relative;
+	 z-index: 10000;
+}
+
+#promptContainer {
+ width: 30%;
+ margin: 0 auto; 
+ margin-top: 30px;
+ font-size: 2.5vw;
+  position: relative;
+	 z-index: 10000;
+}
+
+.whitePrompt {
+	background: rgba(255,255,255, 0.3);
+	color: black;
+	height: auto;
+	width: 100%;
+	margin: 0 auto;font-family: 'Chonburi', cursive;
+	
+ 
+	text-align: center;
+
+    text-shadow: 2px 2px white;
+
+}
+
+
+
+#blackPrompt {
+	width: 100%;
+		background: rgba(0, 0, 0, 0.4);
+	height: auto;
+
+	color: white;
+	
+	font-family: 'Chonburi', cursive;
+	text-align: center;
+	
+	
+}
+
+/*contains each question*/
+.centeringDiv {
+	padding: 10px;
+	 margin-bottom: 50px;
+	 height: auto;
+}
+
+/*contains entire form*/
+	#my_form {
+	  text-align: center;
+	  font-size: 20px;
+	  font-family: 'Chonburi', cursive;
+	  width: 80%;
+	  height: auto;
+	  margin: 0 auto;
+	 margin-top: 3%;
+	  position: relative;
+	 z-index: 10000;
+	  color: white;
+
+	}
+
+/*submit button*/	
+#subButton {
+	
+    border: none;
+    color: black;
+    padding: 1vw 2vw;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+	font-family: 'Oswald', sans-serif;
+	cursor: pointer;
+	}
+
+#subButton:hover {
+	background-color: white;
+	
+}
+
+
+/*question itself*/
+.q {
+	
+	color: white;
+}
+
+
+
+
+/*each picture option*/
+.box {
+
+
+ display: inline-block;	
+ margin-right: 2.5%;
+ margin-bottom: 15px;
+  vertical-align: top;
+  font-family: 'Chonburi', cursive;
+
+
+}
+
+
+.squarePic {
+	 width: 13vw;
+	height: 13vw;
+	margin-bottom: 5px;
+	visibility: hidden;
+	
+}
+
+
+.boxText {
+	display: block !important;
+	width: 13vw;
+	
+}
+
+.box, .q, #welcome {
+	font-size: 1.5vw;
+}
+
+.box:hover {
+	border: solid white;
+	
+}
+
+
+
+
+
+
+
+label > input{ /* HIDE RADIO */
+  visibility: hidden; /* Makes input not-clickable */
+  position: absolute; /* Remove input from document flow */
+}
+
+label > input + img {
+	cursor:pointer;
+  border:2px solid transparent;
+	
+}
+
+label > input:checked + img { /* (RADIO CHECKED) IMAGE STYLES */
+  border:2px solid #f00;
+}
+
+
+label > input + div {
+		cursor:pointer;
+  border:2px solid transparent;
+}
+
+label > input:checked + div { /* (RADIO CHECKED) IMAGE STYLES */
+  border:2px solid #f00;
+}
+
+
+
+@media only screen and (max-width: 1100px) {
+	
+	
+	.squarePic {
+		width: 150px;
+		height: 150px;
+	}
+	
+	.boxText {
+		width: 150px;
+	
+	}
+	
+	/*submit button*/	
+	#subButton {
+	 padding: 10px 20px;
+}
+	
+		
+}
+
+
+
+@media only screen and (max-width: 950px) {
+	
+#logout {
+		font-size: 18px;
+	}
+	
+.whitePrompt {
+	background: rgba(255,255,255, 0.3);
+	color: black;
+	height: auto;
+	
+
+	font-family: 'Chonburi', cursive;
+
+	
+  
+	text-align: center;
+
+}
+
+
+#blackPrompt {
+
+	background: rgba(0, 0, 0, 0.4);
+	height: auto;
+
+	color: white;
+
+	font-family: 'Chonburi', cursive;
+	text-align: center;
+	
+}
+
+
+/*contains entire form*/
+	#my_form {
+	  text-align: center;
+	  font-size: 17px;
+	  font-family: 'Chonburi', cursive;
+	  width: 100%;
+	  height: 100%;
+	  margin: 0 auto;
+	
+	 
+	  color: white;
+
+	}
+	
+/*question itself*/
+.q {
+	font-size: 23px;
+	color: white;
+}
+	
+
+
+/*contains each question*/
+.centeringDiv {
+	 display: inline-block;
+	
+
+	 margin-bottom: 50px;
+	 height: auto;
+}
+	
+	
+#promptContainer {
+	width: 250px;
+	font-size: 20px;
+}
+
+
+
+.box, .q, #welcome {
+	font-size: 17px;
+
+}	
+
+
+	
+}
+
+
+@media only screen and (max-width: 750px) {
+#my_form {
+  text-align: none;
+  font-size: 17px;
+  font-family: 'Chonburi', cursive;
+  width: 100%;
+  height: auto;
+  margin: none;
+ 
+  
+  color: white;
+
+}
+	
+	
+
+
+
+
+}
+
+
+@media only screen and (max-width: 510px) {
+	
+
+
+/*question itself*/
+.q {
+	font-size: 18px;
+
+}
+
+
+	
+	
+	
+}
+
+@media only screen and (max-width: 400px) {
+
+.box {
+	display: block;
+	margin: 0 auto;
+	margin-top: 10px;
+	width: 150px;
+}
+
+
+}
+
+@media only screen and (max-width: 300px) {
+
+	#promptContainer {
+		width: 100%;
+		font-size: 20px;
+	}
+
+
+}

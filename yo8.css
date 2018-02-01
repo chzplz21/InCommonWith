@@ -1,0 +1,683 @@
+html{
+ height:100%;
+ min-height:100%;
+}
+ 
+/*
+body {
+
+	background: #001f3f url(nightSky.jpg) no-repeat center center fixed;
+	background-size: cover;
+	min-height:100%;
+
+}
+*/
+
+body {
+	background: #001f3f;
+
+	
+}
+
+
+
+img {
+   position: fixed; 
+  top: 0; 
+  left: 0; 
+	
+  /* Preserve aspet ratio */
+  min-width: 100%;
+  min-height: 100%;
+  visibility: hidden;
+
+}
+
+
+.startAnimation {
+  animation-name: FadeIn;
+  animation-duration: 3s;
+}
+
+@keyframes FadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+
+
+
+/*logout notification */
+#logout {
+	color: white;
+	font-family: 'Oswald', sans-serif;
+	font-size: 30px;
+	 position: relative;
+	 z-index: 10000;
+}
+
+
+/* box in middle of page at top */
+#middleBox {
+	width: 80%;
+	height: auto;
+	/*background: rgba(255,255,255, 0.5);*/
+	margin: 0 auto;
+	color: white;
+	font-family: 'Tillana', cursive;
+	font-size: 4vw;
+	text-align: center;
+	
+
+	overflow: hidden;
+	 text-shadow: 5px 5px black;
+	 
+	 position: relative;
+	 z-index: 10000;
+
+}
+
+/*who do you have the most in common with in the world? */
+#Who{
+  width: 100%;
+
+  line-height: 80%;
+  margin-top: 25px;
+  
+}
+
+
+#world {
+	
+	font-family: 'Oswald', sans-serif;
+	font-size: 70px;
+
+	
+	
+}
+
+/*box on left containing text */
+#text-box {
+	width: 30%;
+	color: white;
+	font-size: 1.5vw;
+	margin-left: 15%;
+	margin-top: 50px;
+	
+	font-family: 'Tillana', cursive;
+	display: inline-block;
+	/*background: rgba(0, 0, 0, 0.4); */
+	text-shadow: 5px 5px black;
+	
+	 position: relative;
+	 z-index: 10000;
+
+		
+}
+
+#text-box2 {
+	display: none;
+	
+	 position: relative;
+	 z-index: 10000;
+}
+
+
+#rightContainer {
+	
+	 position: relative;
+	 z-index: 10000;
+	display: inline-block;
+	width: 30%;
+	vertical-align: top;
+	margin-left: 9%;
+	margin-top: 50px;
+}
+
+/*holder for sign up form */
+#form-holder-holder {
+	background: rgba(0, 0, 0, 0.4);
+	width: 100%;
+	height: auto;
+	vertical-align: top;
+	margin-bottom: 20px;
+	border: solid white;
+	color: white;
+	font-family: 'Oswald', sans-serif;
+
+}
+
+
+
+
+/*error message box */
+#error {
+	height: auto;
+	width: 300px;
+	
+	position: absolute;
+	right: 15%;
+	z-index: 1;
+	color: white;
+	font-family: 'Oswald', sans-serif;
+	background-color: #FF4136;
+	display: none;
+	
+}
+
+
+/*Sign in box */
+#form-holder-holder2 {
+	
+	background: rgba(0, 0, 0, 0.4);
+	width: 100%;
+	height: auto;
+	color: white;
+	font-family: 'Oswald', sans-serif;
+	border: solid white;
+}
+
+
+.form-holder {
+	position:relative;
+	width: 100%;
+	
+	
+}
+
+/*sign up to take the questionairre text*/
+.TopText {
+	text-align: center;
+	font-size: 1.5vw;
+	margin-bottom: 3%;
+}
+
+/*the form, innermost part of div, contains the inputs */
+.FormItself{
+	
+	
+}
+
+
+
+
+/*input fields in form */
+.form-holder input {
+	
+	margin: 0 auto;
+	display: block;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	padding: 5px;
+	width: 60%;
+	font-family: 'Oswald', sans-serif;
+	display: block;
+	margin-bottom: 20px;
+	line-height: 25px;
+}
+
+.form-holder label {
+	
+	font-size: 1.5vw;
+	margin-left: 20%;
+	
+	
+}
+
+
+.subButton {
+	
+	width: 30% !important;
+	height: auto;
+	font-size: 1.5vw;
+}
+
+.subButton:hover {
+	cursor: pointer;
+	background-color: white;
+	
+}
+
+
+
+#submitForm {
+	margin: 0 auto;
+	
+	
+}
+
+
+/*credit for photo */
+#credit {
+	height: auto;
+	width: 100px;
+	background-color: black;
+	color: white;
+	clear: both;
+	font-family: 'Oswald', sans-serif;
+}
+
+/*forgot password link */
+#forgot {
+	text-align: center;
+	color: white;
+}
+
+
+
+@media only screen and (max-width: 1100px) {
+/*box on left containing text */
+#text-box {	
+	font-size: 18px;
+	
+}
+
+.form-holder label {
+	
+	font-size: 15px;
+	margin-left: 15%;
+	
+}
+
+
+/*input fields in form */
+.form-holder input {
+	width: 70%;
+
+	
+}
+
+
+}
+
+
+@media only screen and (max-width: 950px) {
+	
+/*input fields in form */
+.form-holder input {
+	width: 80%;
+	
+}
+
+.form-holder label {
+	margin-left: 10%;
+	
+}
+
+.TopText {
+	font-size: 17px;
+	
+}
+
+
+/*logout notification */
+#logout {
+	color: white;
+	font-family: 'Oswald', sans-serif;
+	font-size: 25px;
+}
+	
+/* box in middle of page at top */
+#middleBox {
+	width: 400px;
+	height: auto;
+
+	margin: 0 auto;
+	color: white;
+
+	font-size: 40px;
+	text-align: center;
+
+	overflow: hidden;
+}
+
+#world {
+	font-size: 60px;
+	
+}
+
+
+#rightContainer {
+	vertical-align: top;
+	width: 30%;
+	margin-top: 50px;
+	
+	
+}
+
+
+/*holder for sign up form */
+#form-holder-holder {
+	/*
+	background: rgba(0, 0, 0, 0.4);
+	width: 30%;
+	height: auto;
+	margin-top: 50px;
+	border: solid green;
+	margin-left: 8%;
+	color: white;
+	font-family: 'Oswald', sans-serif;
+	*/	
+	
+}
+
+
+
+
+/*Sign in box */
+#form-holder-holder2 {
+
+	/*
+	background: rgba(0, 0, 0, 0.4);
+	width: 250px;
+	height: 250px;
+	margin-top: 420px;
+	
+	color: white;
+	font-family: 'Oswald', sans-serif;
+	*/
+}
+
+/*label for input field */
+#label {
+	display: block;
+	text-align: left;
+	
+	
+}
+
+
+/*input fields in form */
+.form-holder input {
+
+	margin: 0 auto;
+	display: block;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	padding: 3px;
+	font-family: 'Oswald', sans-serif;
+	margin-bottom: 10px;
+	
+	}
+
+
+#text-box {
+	margin-top: 50px;
+	
+	width: 50%;
+	margin-left: 5%;
+}
+
+
+	
+	
+	
+	
+	
+	
+}
+
+
+@media only screen and (max-width: 700px) {
+	
+	
+
+/*logout notification */
+#logout {
+	color: white;
+	font-family: 'Oswald', sans-serif;
+	font-size: 20px;
+}
+	
+/* box in middle of page at top */
+#middleBox {
+	width: 300px;
+	height: auto;
+
+	margin: 0 auto;
+	color: white;
+	font-family: 'Tillana', cursive;
+	font-size: 30px;
+	text-align: center;
+
+	overflow: hidden;
+}
+	
+
+#world {
+	font-size: 50px;
+	
+}
+
+
+
+/*box on left containing text */
+/*
+#text-box {
+width: 40%;
+color: white;
+font-size: 15px;
+margin-left: 10%;
+color: green;
+font-family: 'Tillana', cursive;
+float: left;
+
+}
+*/
+
+
+/*the form, innermost part of div, contains the inputs */
+.FormItself{
+	
+
+
+	/*position: absolute;*/
+	left: 10px;
+	right: 10px;
+	
+}
+	
+	
+#rightContainer {
+	
+display: block;
+	margin: 0 auto;
+	width: 60%;
+	margin-top: 25px;
+	
+	
+}
+
+
+/*holder for sign up form */
+#form-holder-holder {
+
+	margin-bottom: 30px;
+
+}
+
+
+/*Sign in box */
+#form-holder-holder2 {
+	/*
+	background: rgba(0, 0, 0, 0.4);
+	width: 60%;
+	height: 250px;
+	margin-top: 450px;
+	color: white;
+	font-family: 'Oswald', sans-serif;
+	margin: 0 auto;
+	display: block;
+	*/
+}
+
+/*input fields in form */
+.form-holder input {
+	font-size: 17px;
+	
+}
+
+
+.TopText {
+	font-size: 17px;
+	text-align: center;
+	margin: 0 auto;
+	
+	
+}
+
+/*error message box */
+#error {
+	height: auto;
+	width: 200px;
+	background-color: green;
+	position: absolute;
+	right: 15%;
+	z-index: 1;
+	color: white;
+	font-family: 'Oswald', sans-serif;
+	background-color: #FF4136;
+	display: none;
+	
+}
+
+
+#text-box {
+	display: none;
+}
+
+/*now visible */
+#text-box2 {
+
+	display: block;
+	width: 80%;
+	color: white;
+	font-size: 15px;
+	margin-left: 10%;
+	font-family: 'Tillana', cursive;
+	
+
+	margin-top: 20px;
+		
+}
+	
+}
+
+
+@media only screen and (max-width: 550px) {
+
+	
+
+/*logout notification */
+#logout {
+	color: white;
+	font-family: 'Oswald', sans-serif;
+	font-size: 20px;
+}
+	
+/* box in middle of page at top */
+#middleBox {
+	width: 100%;
+	height: auto;
+
+	margin: 0 auto;
+	color: white;
+	font-family: 'Tillana', cursive;
+	font-size: 25px;
+	text-align: center;
+
+	overflow: hidden;
+}
+	
+
+#world {
+	font-size: 40px;
+	
+}
+
+/*holder for sign up form */
+#form-holder-holder {
+	
+	/*
+	background: rgba(0, 0, 0, 0.4);
+	width: 70%;
+	height: auto;
+	margin: 0 auto;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	position: static;
+	color: white;
+	font-family: 'Oswald', sans-serif;
+	*/		
+}
+
+/*input fields in form */
+.form-holder input {
+	width: 70%;
+}
+
+/*Sign in box */
+#form-holder-holder2 {
+	
+	background: rgba(0, 0, 0, 0.4);
+	width: 100%;
+	height: 260px;
+	position: static;
+	margin: 0 auto;
+	color: white;
+	font-family: 'Oswald', sans-serif;
+
+	
+}
+
+
+
+/*box on left containing text, now gone*/
+#text-box {
+	display: none;
+		
+}
+
+
+
+
+/*error message box */
+#error {
+	height: auto;
+	width: 200px;
+	background-color: green;
+	position: absolute;
+	right: 15%;
+	z-index: 1;
+	color: white;
+	font-family: 'Oswald', sans-serif;
+	background-color: #FF4136;
+	display: none;
+	
+}
+
+
+}
+
+
+
+
+
+@media only screen and (max-width: 450px) {
+	/*input fields in form */
+.form-holder input {
+	width: 90%;
+	
+}
+
+.form-holder label {
+	margin-left: 5%;
+}
+
+
+
+#rightContainer {
+	width:90%;
+}
+
+}

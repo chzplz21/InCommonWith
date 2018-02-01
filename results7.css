@@ -1,0 +1,232 @@
+body {
+ font-family: 'Oswald', sans-serif;
+}
+
+html {
+
+background: url(sunrise.jpg) no-repeat center center fixed;
+background-size: cover;
+
+}
+
+
+
+/* Text for thanks and logout */
+.topText {
+	font-size: 3vw;
+	color: white;
+	width: 100%;
+	height: auto;
+	margin: 0 auto;
+	margin-top: 10px;
+	text-align: center;
+}
+
+#leftTopText {
+
+	font-size: 1.7vw;
+	
+}
+
+
+#leftTopText a:hover {
+	color: white;
+}
+
+
+/*sets links to be white */
+a {
+	color: blue;
+}
+
+/*retake the questionairre link */
+#retake {
+	font-size: 15px;
+	
+}
+
+/*just the first box, clear the floats above*/
+#first {
+	clear: both;
+}
+
+.side {
+	width: 35%;
+	display: inline-block;
+	vertical-align: top;
+	height: auto;
+	margin-left: 10%;
+	
+}
+
+
+/*class for 2 small top boxes */
+.smallBox {
+
+	height: auto;
+	background: rgba(255,255,255, 0.3);
+	margin-top: 20px;
+	
+	box-shadow: 5px 5px 5px #888888;
+}
+
+#top {
+	border: solid white;
+	height: auto;
+}
+
+
+p{
+	margin: 10px;
+}
+
+.center{
+	text-align: center;
+	color: blue;
+}
+
+#bottomContainer{
+	clear: both;
+	width: 100%;
+	height: 100%;
+	
+}
+
+
+/*Box ID for showing what you have in common */
+.BigBox{
+  margin-top: 20px;
+  background: rgba(255,255,255, 0.3);
+  height: auto;
+  box-shadow: 5px -5px 5px #888888;
+}
+
+
+.smallBox, .BigBox {
+	font-size: 1.7vw;
+}
+
+
+#text {
+	margin: 0 auto;
+}
+/*credit for photo */
+#credit {
+	height: 50px;
+	width: 100px;
+	background-color: black;
+	color: white;
+	margin-top: 50%;
+	float: left;
+}
+
+
+.InfoLine {
+	margin-top: 4%;
+	margin-left: 5%;
+}
+
+
+
+@media only screen and (max-width: 1000px) {
+
+.smallBox, .BigBox {
+	font-size: 20px;
+
+}
+
+.topText {
+	font-size: 25px;
+}
+
+
+.side {
+		width: 40%;
+	margin-left: 6%;
+}
+
+
+#leftTopText {
+	font-size:20px;
+}
+
+
+}	
+
+
+@media only screen and (max-width: 600px) {
+	
+ /* Text for thanks and logout */
+.topText {
+	font-size: 25px;
+	color: white;
+}
+
+#leftTopText {
+
+
+	font-size: 18px;
+
+}
+
+
+.BigBox, .smallBox {
+	font-size: 20px;
+
+}	
+
+
+
+
+
+.side {
+	width: 70%;
+	display: block;
+	margin: 0 auto;
+	
+}
+
+
+
+	
+	
+	
+}
+
+
+
+@media only screen and (max-width: 350px) {
+
+
+
+	
+.smallBox {
+	font-size: 18px;
+
+	
+}	
+
+
+/*Box ID for showing what you have in common */
+.BigBox{
+  
+ 
+
+  font-size: 17px;
+}
+
+.side {
+	width: 100%;
+	display: block;
+	margin: 0 auto;
+}
+
+
+	
+	
+}
+
+
+
+
+
