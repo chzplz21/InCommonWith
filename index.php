@@ -1,7 +1,7 @@
 <?php
 session_start();   
-$link = mysqli_connect("shareddb1b.hosting.stackcp.net", "users5-358b16", "BlahBlah2", "users5-358b16");
-
+//$link = mysqli_connect("shareddb1b.hosting.stackcp.net", "drothkop_wearesimilar5-358b16", "BlahBlah2", "drothkop_wearesimilar5-358b16");
+$link = mysqli_connect("gator4037.hostgator.com", "drothkop_user", "lOg@?Eq*oLPh", "drothkop_wearesimilar");
 
 if (mysqli_connect_error()) {
 
@@ -157,13 +157,13 @@ if (array_key_exists("logout", $_GET)) {
 
 <head>
 
-<link rel="stylesheet" type="text/css" href="yo8.css">
+<link rel="stylesheet" type="text/css" href="styles/index.css">
 <link href="https://fonts.googleapis.com/css?family=Finger+Paint|Knewave|Tillana" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Arvo|Merriweather+Sans" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
 <meta name="viewport" content="width=device-width">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script src="loadImage.js"></script>
+<script src="Scripts/loadImage.js"></script>
 
 
 <style>
@@ -206,8 +206,10 @@ if (array_key_exists("logout", $_GET)) {
 	Just straight up: Which human is the most similar to me? Do they live across the street? Or do they live across the Universe? 
 	<br>
 	<br>
-	Just enter your name and location and you will be a guided through a simple 15 questions which have been expertly designed by Personality Scientists to determine who is the most similar to you in the world. From there you can send them a private message, get in touch with them, and perhaps even meet them! 
-
+	Just enter your name and location and you will be a guided through a simple 15 questions which have been expertly designed by Personality Scientists* to determine who is the most similar to you in the world. From there you can send them a private message, get in touch with them, and perhaps even meet them! 
+	<br>
+	<br>
+	*dr. d. rothkopf
 
 </div>
 
@@ -221,7 +223,7 @@ if (array_key_exists("logout", $_GET)) {
 
 	<div id = "form-holder-holder">
 	 <div class = "form-holder">
-		<div class = "TopText"> Sign up to take the questionairre! </div>
+		<div class = "TopText"> Find our now! </div>
 		<form class = "FormItself" method="post">
 			
 			<label>Your Name: 

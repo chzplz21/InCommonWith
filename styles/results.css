@@ -4,7 +4,7 @@ body {
 
 html {
 
-background: url(sunrise.jpg) no-repeat center center fixed;
+background: url(/sunrise.jpg) no-repeat center center fixed;
 background-size: cover;
 
 }

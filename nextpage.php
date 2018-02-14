@@ -13,12 +13,12 @@ session_start();
 
 <head>
 
-<link rel="stylesheet" type="text/css" href="nextpage6.css">
+<link rel="stylesheet" type="text/css" href="styles/nextpage.css">
 <link href="https://fonts.googleapis.com/css?family=Chonburi" rel="stylesheet">
 <meta name="viewport" content="width=device-width">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script src="nextp2.js"> </script>
-<script src="loadImage.js"></script>
+<script src="Scripts/nextp2.js"> </script>
+<script src="Scripts/loadImage.js"></script>
 
 </head>
 
@@ -33,7 +33,7 @@ session_start();
 
 	<h1 id = "welcome"> Welcome <?php echo $name?>! </h1>
 
-	<a id = "logout" href = "yo.php?logout=1">Log Out</a>
+	<a id = "logout" href = "index.php?logout=1">Log Out</a>
 	
 		<div id = "promptContainer">
 			<div class = "whitePrompt">
@@ -680,7 +680,7 @@ session_start();
 						
 						
 						<label>
-							<input type = "radio" name = "Historical" value = "Nomadic Warrior Rapist" class = "box">
+							<input type = "radio" name = "Historical" value = "Nomadic Warrior" class = "box">
 								<div class = "box">
 								<img src = "Images/NomadsNew.jpg" class = "squarePic" onload="imgLoad(this)">
 								<div class = "boxText">Nomadic Warrior </div>

@@ -1,7 +1,7 @@
 <?php
 session_start();
-$link = mysqli_connect("shareddb1b.hosting.stackcp.net", "users5-358b16", "BlahBlah2", "users5-358b16");
-
+//$link = mysqli_connect("shareddb1b.hosting.stackcp.net", "users5-358b16", "BlahBlah2", "users5-358b16");
+$link = mysqli_connect("gator4037.hostgator.com", "drothkop_user", "lOg@?Eq*oLPh", "drothkop_wearesimilar");
 
 
 if (mysqli_connect_error()) {
@@ -31,7 +31,6 @@ die ("error");
 		
 		
 		$settings = $_POST['Settings'];
-
 		$animal = $_POST['Animal'];
 		$movie = $_POST['Movie'];
 		$work = $_POST['Work'];
@@ -98,24 +97,37 @@ die ("error");
 	$num_fields = mysqli_num_fields($result);
 	
 	
+	$rows = array();
+	while ($row=mysqli_fetch_array($result,MYSQLI_NUM)) {
+		$rows[] = $row;
+	}
+	
+	
+
 	//Fetches all the rows and stores them in a 2d integer array 
-	$rows = mysqli_fetch_all($result, MYSQLI_NUM);
+	//$rows = mysqli_fetch_all($result, MYSQLI_NUM);
 	
 
 	//query to get current row's id that has either logged in or signed up
 	$query = "SELECT id FROM users WHERE email = '$bmail'";
 	$result = mysqli_query($link, $query);
+	
 	$idResult = mysqli_fetch_object($result);
+	
 	$LoggedInId = $idResult->id;
 	
 	//Checks to see which row is currently logged in
 	for ($i = 0; $i < $num_rows; $i++) {
+		
 		if ($rows[$i][0] == $LoggedInId) {
+		
 			$cur_row = $i;
 			
 		}
 			
 	}
+	
+
 	
 	$array = array();
 	$count=0;
@@ -131,12 +143,13 @@ die ("error");
 			}
 		
 		}
-		$array[$i] = $count;
 		
+		$array[$i] = $count;
 		$count = 0;
 	}
 	
-
+	
+	
 	
 	//Determines which row has the most in common with the current row 
 	$max=0;	
@@ -146,15 +159,33 @@ die ("error");
 			$max = $array[$i];
 			$maxRow = $i; 				
 	}
-	}	
+	}
+
+	
 	
 	//Gets the Email of the Row that has the most in common with the subject
 	$maxRowName = $rows[$maxRow][1];
 	
+	$query = "UPDATE users SET 
+	
+	MostCommon = '$maxRowName'
+	
+	
+	WHERE email = '$bmail'";
+	
+	if (mysqli_query($link, $query)) {
+			
+		
+		} else {
+			echo "Error: " . $query . "<br>" . $link->error;
+		} 
+	
+	
+	
 	//Gets every field that you have in common  
 	$commonArray = array();
 	$index = 0;
-	for($i=5; $i<$num_fields; $i++) {
+	for($i=5; $i<$num_fields-1; $i++) {
 		
 		if ($rows[$cur_row][$i] == $rows[$maxRow][$i]) {
 		    $commonArray[$index] = $rows[$cur_row][$i];	
@@ -217,11 +248,6 @@ $questionsArray = array("Which of these settings would you want to live in the m
 
 
 	
-	
- 
-
-
-
 ?>
 
 
@@ -232,7 +258,7 @@ $questionsArray = array("Which of these settings would you want to live in the m
 
 <head>
 
-<link rel="stylesheet" type="text/css" href="results7.css">
+<link rel="stylesheet" type="text/css" href="styles/results.css">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link href="https://fonts.googleapis.com/css?family=Arvo|Merriweather+Sans" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
@@ -248,7 +274,7 @@ $questionsArray = array("Which of these settings would you want to live in the m
 
 <!--logout and retake -->
 <div id = "leftTopText">
-	<a href = "yo.php?logout=1">Log Out</a>
+	<a href = "index.php?logout=1">Log Out</a>
 	<br>
 
 	<a href = "nextpage.php?logout=1">Retake the Questionairre?</a>
@@ -406,7 +432,6 @@ $questionsArray = array("Which of these settings would you want to live in the m
 
 	$(document).ready(function(){
 			var commonArray = <?php echo json_encode($commonArray) ?>;
-			
 			var questionsArray = <?php echo json_encode($questionsArray) ?>;
 			
 

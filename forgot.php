@@ -52,7 +52,7 @@
 <html>
 
 <head>
-<link rel="stylesheet" type="text/css" href="forgot.css">
+<link rel="stylesheet" type="text/css" href="styles/forgot.css">
 <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Finger+Paint|Knewave|Tillana" rel="stylesheet">
 <meta name="viewport" content="width=device-width">
